@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer _renderer;
     Collider2D _collider;
 
+    Gun _gun;
+
     float _moveInput;
     bool _pressedJump;
     
@@ -25,6 +27,8 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _renderer = GetComponent<SpriteRenderer>();
         _collider = GetComponent<Collider2D>();
+        
+        _gun = transform.GetComponentInChildren<Gun>();
     }
 
     void Start()
@@ -38,9 +42,38 @@ public class PlayerController : MonoBehaviour
         {
             _pressedJump = true;
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            _gun.Shoot(_gun.transform.right);
+        }
         
+        PointGunToMouse();
+
         _moveInput = Input.GetAxisRaw("Horizontal");
-        Flip(_moveInput);
+        // Flip(_moveInput);
+        FlipX();
+    }
+
+    void PointGunToMouse()
+    {
+        Vector3 mousePos = Input.mousePosition;
+        Vector3 objectPos = Camera.main.WorldToScreenPoint (_gun.transform.position);
+        mousePos.x = mousePos.x - objectPos.x;
+        mousePos.y = mousePos.y - objectPos.y;
+ 
+        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        _gun.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+    }
+
+    void FlipX()
+    {
+        _renderer.flipX = (transform.position.x - MousePosition().x) > 0;
+    }
+
+    Vector2 MousePosition()
+    {
+        return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     void Move(float input)

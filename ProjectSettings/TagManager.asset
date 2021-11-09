@@ -12,13 +12,13 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
+  - Player
+  - Enemy
   - 
   - Ground
   - 
-  - 
-  - 
+  - PlayerProjectile
+  - EnemyProjectile
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 366518429
     locked: 0
   - name: Platforms
     uniqueID: 1655956283
