@@ -14,7 +14,7 @@ public class LevelEditor : Editor
             level.GenerateWalls();
         }
         
-        if (GUILayout.Button("Clear walls"))
+        if (GUILayout.Button("Clear wall tiles"))
         {
             level.ClearWalls();
         }

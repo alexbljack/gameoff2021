@@ -47,6 +47,11 @@ public class PlayerController : MonoBehaviour
         {
             _gun.Shoot(_gun.transform.right);
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            GameManager.Instance.SwitchToDebugMode();
+        }
         
         PointGunToMouse();
 
