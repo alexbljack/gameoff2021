@@ -8,8 +8,8 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] float debugModeCooldown;
     
-    public event Action EnableDebugMode;
-    public event Action DisableDebugMode;
+    public static event Action EnableDebugModeEvent;
+    public static event Action DisableDebugModeEvent;
 
     bool _debugMode;
     
@@ -17,7 +17,7 @@ public class GameManager : Singleton<GameManager>
     {
         if (!_debugMode)
         {
-            EnableDebugMode?.Invoke();
+            EnableDebugModeEvent?.Invoke();
             StartCoroutine(DebugModeRoutine());
         }
     }
@@ -27,6 +27,6 @@ public class GameManager : Singleton<GameManager>
         _debugMode = true;
         yield return new WaitForSeconds(debugModeCooldown);
         _debugMode = false;
-        DisableDebugMode?.Invoke();
+        DisableDebugModeEvent?.Invoke();
     }
 }

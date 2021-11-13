@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace Lib
 {
@@ -13,12 +14,6 @@ namespace Lib
                 if (_instance == null)
                 {
                     _instance = FindObjectOfType<T>();
-
-                    if (_instance == null)
-                    {
-                        var singleton = new GameObject(typeof(T).Name);
-                        _instance = singleton.AddComponent<T>();
-                    }
                 }
 
                 return _instance;
@@ -27,14 +22,9 @@ namespace Lib
 
         public void Awake()
         {
-            if (_instance == null)
-            {
-                _instance = this as T;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+            _instance = this as T;
+            Assert.IsNotNull(_instance, $"{typeof(T)} can be instantiated only once.");
+            DontDestroyOnLoad(gameObject);
         }
     }
 }

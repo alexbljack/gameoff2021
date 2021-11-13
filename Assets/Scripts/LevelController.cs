@@ -27,14 +27,14 @@ public class LevelController : MonoBehaviour
 
     void OnEnable()
     {
-        GameManager.Instance.EnableDebugMode += EnableDebug;
-        GameManager.Instance.DisableDebugMode += DisableDebug;
+        GameManager.EnableDebugModeEvent += EnableDebug;
+        GameManager.DisableDebugModeEvent += DisableDebug;
     }
     
     void OnDisable()
     {
-        GameManager.Instance.EnableDebugMode -= EnableDebug;
-        GameManager.Instance.DisableDebugMode -= DisableDebug;
+        GameManager.EnableDebugModeEvent -= EnableDebug;
+        GameManager.DisableDebugModeEvent -= DisableDebug;
     }
 
     void Start()
