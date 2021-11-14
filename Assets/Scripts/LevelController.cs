@@ -46,16 +46,16 @@ public class LevelController : MonoBehaviour
 
     public void GenerateWalls()
     {
-        for (int x=-HalfWidth; x < HalfWidth; x++)
+        for (int x=-HalfWidth-1; x <= HalfWidth; x++)
         {
             DrawWall(x, HalfHeight);
-            DrawWall(x, -HalfHeight);
+            DrawWall(x, -HalfHeight-1);
         }
         
-        for (int y=-HalfHeight; y < HalfHeight; y++)
+        for (int y=-HalfHeight-1; y <= HalfHeight; y++)
         {
             DrawWall(HalfWidth, y);
-            DrawWall(-HalfWidth, y);
+            DrawWall(-HalfWidth-1, y);
         }   
     }
 
