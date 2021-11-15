@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using Lib;
 using UnityEditor;
 using UnityEngine;
@@ -16,7 +18,21 @@ public class GameManager : Singleton<GameManager>
     public static event Action FinishLevel;
 
     bool _debugMode;
-    
+    LevelExit _exit;
+
+    public List<Enemy> Enemies => FindObjectsOfType<Enemy>().ToList();
+
+    void Start()
+    {
+        _exit = FindObjectOfType<LevelExit>();
+        _exit.gameObject.SetActive(false);
+    }
+
+    void Update()
+    {
+        CheckForExitSpawn();
+    }
+
     public void SwitchToDebugMode()
     {
         if (!_debugMode)
@@ -32,6 +48,14 @@ public class GameManager : Singleton<GameManager>
         yield return new WaitForSeconds(debugModeCooldown);
         _debugMode = false;
         DisableDebugModeEvent?.Invoke();
+    }
+
+    void CheckForExitSpawn()
+    {
+        if (Enemies.Count == 0)
+        {
+            _exit.gameObject.SetActive(true);
+        }
     }
 
     public void ExitLevel()

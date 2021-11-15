@@ -5,6 +5,9 @@ public class LevelExit : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D col)
     {
-        GameManager.Instance.ExitLevel();
+        if (col.GetComponent<PlayerController>() != null)
+        {
+            GameManager.Instance.ExitLevel();
+        }
     }
 }

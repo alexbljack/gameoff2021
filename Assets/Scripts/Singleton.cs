@@ -24,7 +24,6 @@ namespace Lib
         {
             _instance = this as T;
             Assert.IsNotNull(_instance, $"{typeof(T)} can be instantiated only once.");
-            DontDestroyOnLoad(gameObject);
         }
     }
 }
