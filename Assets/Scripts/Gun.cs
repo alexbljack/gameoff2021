@@ -25,12 +25,32 @@ public class Gun : MonoBehaviour
         _canShoot = true;
     }
 
+    GameObject CreateProjectile(Vector2 direction)
+    {
+        GameObject bullet = Instantiate(bulletPrefab, _barrel.position, Quaternion.identity);
+        bullet.GetComponent<Projectile>().Init(speed, direction);
+        return bullet;
+    }
+
     public void Shoot(Vector2 direction)
     {
         if (_canShoot)
         {
-            GameObject bullet = Instantiate(bulletPrefab, _barrel.position, Quaternion.identity);
-            bullet.GetComponent<Projectile>().Init(speed, direction);
+            CreateProjectile(direction);
+            StartCoroutine(CooldownRoutine());
+        }
+    }
+
+    public void Spread(int angleStep)
+    {
+        if (_canShoot)
+        {
+            var sectors = 360 / angleStep;
+            for (int i = 0; i < sectors; i++)
+            {
+                Vector2 dir = Quaternion.Euler(0, 0, i * angleStep) * Vector2.up;
+                CreateProjectile(dir);
+            }
             StartCoroutine(CooldownRoutine());
         }
     }

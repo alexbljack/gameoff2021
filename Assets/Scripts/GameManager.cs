@@ -21,6 +21,7 @@ public class GameManager : Singleton<GameManager>
     LevelExit _exit;
 
     public List<Enemy> Enemies => FindObjectsOfType<Enemy>().ToList();
+    public Transform Player => FindObjectOfType<PlayerController>().transform;
 
     void Start()
     {
