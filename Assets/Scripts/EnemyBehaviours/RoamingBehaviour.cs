@@ -75,7 +75,6 @@ public class RoamingBehaviour : MonoBehaviour
 
     IEnumerator CalmingDown()
     {
-        Debug.Log("Staring");
         _calming = true;
         yield return new WaitForSeconds(1);
         _calming = false;
