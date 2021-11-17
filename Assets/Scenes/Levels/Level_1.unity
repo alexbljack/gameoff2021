@@ -338,6 +338,10 @@ PrefabInstance:
       propertyPath: waitTime
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: -7533706913612546856, guid: ad226efc9fdc14d18b0108176153c300, type: 3}
+      propertyPath: detectRadius
+      value: 8.48
+      objectReference: {fileID: 0}
     - target: {fileID: 8010538428323371856, guid: ad226efc9fdc14d18b0108176153c300, type: 3}
       propertyPath: m_RootOrder
       value: 4
