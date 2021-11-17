@@ -693,6 +693,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7422015627603150104, guid: 632301693dd804ce8b53b2e542b8cb8f, type: 3}
+      propertyPath: angleStep
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664072382077838270, guid: 632301693dd804ce8b53b2e542b8cb8f, type: 3}
+      propertyPath: lagInSeconds
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 632301693dd804ce8b53b2e542b8cb8f, type: 3}
 --- !u!1001 &3352187570552196873
