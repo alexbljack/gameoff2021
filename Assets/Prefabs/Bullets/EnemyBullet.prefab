@@ -15,10 +15,26 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 7788458950934684350, guid: bcef91cdda17f42f180f5d3b3661376d, type: 3}
+      propertyPath: effect
+      value: 
+      objectReference: {fileID: 5589317039008627437, guid: 456bf6973bf3ebc46a7e3927ee4c3ea9, type: 3}
     - target: {fileID: 8262556305654629914, guid: bcef91cdda17f42f180f5d3b3661376d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7080572027169460247, guid: 61a7727f9cb7146ebb03733575f838d3, type: 3}
+      objectReference: {fileID: 1495971487, guid: f63d86b3152b9624989402e1c755c506, type: 3}
+    - target: {fileID: 8262556305654629914, guid: bcef91cdda17f42f180f5d3b3661376d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262556305654629914, guid: bcef91cdda17f42f180f5d3b3661376d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262556305654629914, guid: bcef91cdda17f42f180f5d3b3661376d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8621343448745654735, guid: bcef91cdda17f42f180f5d3b3661376d, type: 3}
       propertyPath: m_RootOrder
       value: 0

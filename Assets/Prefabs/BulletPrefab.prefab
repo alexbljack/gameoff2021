@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2328175376780109519}
   - component: {fileID: -3535588307693759848}
   - component: {fileID: -2385531031403003888}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: BulletPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  effect: {fileID: 5589317039008627437, guid: 393868f7113ad3243afd221be38c3e44, type: 3}
 --- !u!212 &2328175376780109519
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -88,8 +89,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 494474253
   m_SortingLayer: 3
-  m_SortingOrder: 1
-  m_Sprite: {fileID: -1587189340, guid: f63d86b3152b9624989402e1c755c506, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: f39714044c2bbf5449cf6f37226a5ca6, type: 3}
   m_Color: {r: 0.49426842, g: 0.9811321, b: 0.9811321, a: 1}
   m_FlipX: 0
   m_FlipY: 0

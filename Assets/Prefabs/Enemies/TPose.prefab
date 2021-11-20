@@ -51,6 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea65ad2419b494d85b5a11787f6a9a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dieEffect: {fileID: 5589317039008627437, guid: d3b00ec8cb6b1ac458b1b243abdbf7bf, type: 3}
+  bloodSplash: {fileID: 1694598090275386285, guid: 6330a21601c792b459a150042c5d6475, type: 3}
 --- !u!114 &4955968295124875276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,8 +149,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 494474253
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9d44ff10ee2e344cb86776e2a5e246c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
