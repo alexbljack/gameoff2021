@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 8010538428323371858}
   - component: {fileID: 8010538428323371857}
   m_Layer: 8
-  m_Name: RoamingEnemy
+  m_Name: Boss_Devil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,7 +133,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8010538428323371862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.02, y: 0.77, z: 0}
+  m_LocalPosition: {x: 7.02, y: 0.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -154,8 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea65ad2419b494d85b5a11787f6a9a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dieEffect: {fileID: 5589317039008627437, guid: d3b00ec8cb6b1ac458b1b243abdbf7bf, type: 3}
-  bloodSplash: {fileID: 1694598090275386285, guid: 6330a21601c792b459a150042c5d6475, type: 3}
+  dieEffect: {fileID: 5589317039008627437, guid: 4a4f9fd18c06e184ebaec95117e48445, type: 3}
+  bloodSplash: {fileID: 1694598090275386285, guid: 0d61e61f1633d3b4d881bc330b33d5cf, type: 3}
 --- !u!114 &8079676971504944881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,7 +254,7 @@ SpriteRenderer:
   m_SortingLayerID: 494474253
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5a759b7638a634dd6ba41b1f8ce2123a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 87fb5501f9e55d24eaf88e03128cb68a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -278,18 +278,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0061979294, y: -0.012395322}
+  m_Offset: {x: -0.0061719418, y: 0.008774757}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.0078125, y: 2.0078125}
     newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9216099, y: 0.90921414}
+  m_Size: {x: 2.1037087, y: 2.0318575}
   m_EdgeRadius: 0
 --- !u!50 &8010538428323371857
 Rigidbody2D:
@@ -321,15 +321,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3352187570417179184, guid: 303a421c69224439fac64a50bf08d53b, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.9811321
       objectReference: {fileID: 0}
     - target: {fileID: 3352187570417179184, guid: 303a421c69224439fac64a50bf08d53b, type: 3}
       propertyPath: m_Color.g
-      value: 0.10939591
+      value: 0.9811321
       objectReference: {fileID: 0}
     - target: {fileID: 3352187570417179184, guid: 303a421c69224439fac64a50bf08d53b, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.9811321
       objectReference: {fileID: 0}
     - target: {fileID: 3352187570417179198, guid: 303a421c69224439fac64a50bf08d53b, type: 3}
       propertyPath: m_Pivot.x
@@ -421,15 +421,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3352187571530663382, guid: 303a421c69224439fac64a50bf08d53b, type: 3}
       propertyPath: m_Color.b
-      value: 0.5981132
+      value: 0.24705884
       objectReference: {fileID: 0}
     - target: {fileID: 3352187571530663382, guid: 303a421c69224439fac64a50bf08d53b, type: 3}
       propertyPath: m_Color.g
-      value: 0.7767827
+      value: 0.121568635
       objectReference: {fileID: 0}
     - target: {fileID: 3352187571530663382, guid: 303a421c69224439fac64a50bf08d53b, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.8352942
       objectReference: {fileID: 0}
     - target: {fileID: 3352187571530663383, guid: 303a421c69224439fac64a50bf08d53b, type: 3}
       propertyPath: m_AnchorMax.x

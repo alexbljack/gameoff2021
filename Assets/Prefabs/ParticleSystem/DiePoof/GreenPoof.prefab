@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6039833488654984907}
   - component: {fileID: 7338213435028217354}
   m_Layer: 0
-  m_Name: Poof
+  m_Name: GreenPoof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
