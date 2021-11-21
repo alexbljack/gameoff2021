@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         camShake.Shake();
-        Instantiate(bloodSplash, new Vector3(transform.position.x, transform.position.y - 0.5f), Quaternion.identity);
+        Instantiate(bloodSplash, new Vector3(transform.position.x, transform.position.y - 1f), Quaternion.identity);
         Instantiate(dieEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

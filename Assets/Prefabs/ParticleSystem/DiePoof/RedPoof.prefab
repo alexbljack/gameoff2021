@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6039833488654984907}
   - component: {fileID: 7338213435028217354}
   m_Layer: 0
-  m_Name: EnemyProjectTilePoof
+  m_Name: RedPoof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,8 +116,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.8
-      minScalar: 0.2
+      scalar: 2
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -222,8 +222,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 0.49411765, b: 0, a: 1}
-      maxColor: {r: 1, g: 0.8884187, b: 0, a: 1}
+      minColor: {r: 0.745283, g: 0.037967186, b: 0.06428606, a: 1}
+      maxColor: {r: 1, g: 0.14226699, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
