@@ -6,7 +6,9 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] int damage;
-    
+    [SerializeField]
+    GameObject effect;
+
     float _speed = -1;
     Vector2 _direction = Vector2.zero;
 
@@ -31,6 +33,7 @@ public class Projectile : MonoBehaviour
         {
             entity.Damage(damage);
         }
+        Instantiate(effect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

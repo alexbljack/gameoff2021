@@ -16,7 +16,7 @@ TagManager:
   - Enemy
   - 
   - Ground
-  - 
+  - EnvDecals
   - PlayerProjectile
   - EnemyProjectile
   - 
@@ -49,4 +49,7 @@ TagManager:
     locked: 0
   - name: Entities
     uniqueID: 494474253
+    locked: 0
+  - name: Decals
+    uniqueID: 4235696405
     locked: 0
