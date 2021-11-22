@@ -2369,7 +2369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.68, y: 0, z: -10}
+  m_LocalPosition: {x: -5.2, y: 0.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2422,7 +2422,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 8df4274f2e74e364f8946377e22fe8e7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -2453,6 +2453,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c9741b21d95a48beb3c7081be821706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toFollow: {fileID: 1534632875}
+  smoothTime: 0.2
+  freezeX: 0
+  freezeY: 0
+  xBounds:
+    min: -10
+    max: 13
+  yBounds:
+    min: -1
+    max: 2.8
 --- !u!1001 &521415545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8138,6 +8148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3365d26439314d7f9748a90bdf0b37c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1534632875 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3513047152231738900, guid: d3576b1e07d30497aa7278af8358929e, type: 3}
+  m_PrefabInstance: {fileID: 3513047153649962378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1540796696
 PrefabInstance:
   m_ObjectHideFlags: 0
