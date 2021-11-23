@@ -26,9 +26,13 @@ public class Entity : MonoBehaviour
     
     public void Damage(int amount)
     {
-        HitEvent?.Invoke();
         ChangeHp(-amount);
-        if (_hp <= 0) { DeadEvent?.Invoke(); }
+        if (_hp <= 0)
+        {
+            DeadEvent?.Invoke();
+            return;
+        }
+        HitEvent?.Invoke();
     }
     
     void ChangeHp(int amount)
