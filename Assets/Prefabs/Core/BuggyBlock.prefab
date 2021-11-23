@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d340ee058d14ea8b094fabac89908e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poofEffect: {fileID: 5589317039008627437, guid: 7f00c48a7e412964b92d4f4296fcdc79, type: 3}
 --- !u!114 &3243813515521418500
 MonoBehaviour:
   m_ObjectHideFlags: 0
