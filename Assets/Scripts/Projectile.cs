@@ -5,9 +5,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] int damage;
-    [SerializeField]
-    GameObject effect;
+    [SerializeField] GameObject effect;
 
     float _speed = -1;
     Vector2 _direction = Vector2.zero;
@@ -28,11 +26,6 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        var entity = other.GetComponent<Entity>();
-        if (entity != null)
-        {
-            entity.Damage(damage);
-        }
         Instantiate(effect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

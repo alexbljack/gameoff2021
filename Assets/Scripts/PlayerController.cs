@@ -1,16 +1,14 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float runSpeed;
     [SerializeField] float jumpForce;
     
-    SpriteRenderer _renderer;
     RigidBodyMove _moveController;
+    Entity _entity;
 
     Gun _gun;
 
@@ -19,10 +17,20 @@ public class PlayerController : MonoBehaviour
     
     void Awake()
     {
-        _renderer = GetComponent<SpriteRenderer>();
+        _entity = GetComponent<Entity>();
         _moveController = GetComponent<RigidBodyMove>();
         
         _gun = transform.GetComponentInChildren<Gun>();
+    }
+
+    void OnEnable()
+    {
+        _entity.DeadEvent += Die;
+    }
+
+    void OnDisable()
+    {
+        _entity.DeadEvent -= Die;
     }
 
     void Start()
@@ -44,11 +52,6 @@ public class PlayerController : MonoBehaviour
             Invoke(nameof(ShootGun), lag);
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Invoke(nameof(SwitchToDebug), lag);
-        }
-
         if (Input.GetKey(KeyCode.A))
         {
             Invoke(nameof(MoveLeft), lag);
@@ -65,11 +68,6 @@ public class PlayerController : MonoBehaviour
         var lagsComponents = FindObjectsOfType<InputLagDebuff>();
         var lags = from component in lagsComponents select component.lagInSeconds;
         return lags.Count() > 0 ? Mathf.Max(lags.ToArray()) : 0;
-    }
-
-    void SwitchToDebug()
-    {
-        GameManager.Instance.SwitchToDebugMode();
     }
 
     void ShootGun()
@@ -107,5 +105,10 @@ public class PlayerController : MonoBehaviour
         }
 
         // _rb.velocity = new Vector2(Mathf.Clamp(_rb.velocity.x, -runSpeed, runSpeed), _rb.velocity.y);
+    }
+
+    void Die()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

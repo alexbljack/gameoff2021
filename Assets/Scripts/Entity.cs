@@ -7,6 +7,7 @@ public class Entity : MonoBehaviour
     [SerializeField] int health;
     
     public event Action<int, int> HpChangedEvent;
+    public event Action HitEvent;
     public event Action DeadEvent;
     
     int _hp;
@@ -25,6 +26,7 @@ public class Entity : MonoBehaviour
     
     public void Damage(int amount)
     {
+        HitEvent?.Invoke();
         ChangeHp(-amount);
         if (_hp <= 0) { DeadEvent?.Invoke(); }
     }

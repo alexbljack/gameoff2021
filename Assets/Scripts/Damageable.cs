@@ -1,18 +1,28 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider2D))]
 public class Damageable : MonoBehaviour
 {
     [SerializeField] int damage;
-    [SerializeField] LayerMask targetLayer;
+    [SerializeField] List<LayerMask> targetLayers;
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (IsObjectInLayer(other.gameObject, targetLayer))
+        OnCollide(other.gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        OnCollide(other.gameObject);
+    }
+
+    void OnCollide(GameObject obj)
+    {
+        if (IsObjectInLayer(obj, targetLayers))
         {
-            var entity = other.gameObject.GetComponent<Entity>();
+            var entity = obj.gameObject.GetComponent<Entity>();
             if (entity != null)
             {
                 entity.Damage(damage);
@@ -20,8 +30,8 @@ public class Damageable : MonoBehaviour
         }
     }
 
-    bool IsObjectInLayer(GameObject obj, LayerMask layer)
+    bool IsObjectInLayer(GameObject obj, List<LayerMask> layers)
     {
-        return (layer.value & (1 << obj.layer)) > 0;
+        return layers.Any(layer => (layer.value & (1 << obj.layer)) > 0) ;
     }
 }

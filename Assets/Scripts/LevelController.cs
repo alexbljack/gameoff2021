@@ -16,6 +16,8 @@ public class LevelController : MonoBehaviour
     [SerializeField] Tilemap noCollideTilemap;
     [SerializeField] Tilemap damageTilemap;
 
+    [SerializeField] GameObject environment;
+
     [Header("Other side")] 
     [SerializeField] GameObject debugTilemapPrefab;
     [SerializeField] Tile debugBaseTile;
@@ -88,12 +90,14 @@ public class LevelController : MonoBehaviour
     {
         CreateDebugTilemap();
         SetTilemapRender(noCollideTilemap, false);
+        environment.SetActive(false);
     }
 
     void DisableDebug()
     {
         HideDebugTiles();
         SetTilemapRender(noCollideTilemap, true);
+        environment.SetActive(true);
     }
 
     public void CreateDebugTilemap()

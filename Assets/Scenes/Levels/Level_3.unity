@@ -8447,6 +8447,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 519420032}
+  - component: {fileID: 519420034}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
@@ -8516,7 +8517,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 18.38, y: 0.54, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8556,6 +8557,28 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c9741b21d95a48beb3c7081be821706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toFollow: {fileID: 1949370820}
+  smoothTime: 0.2
+  freezeX: 0
+  freezeY: 0
+  xBounds:
+    min: -16
+    max: 18
+  yBounds:
+    min: -4
+    max: 0.5
 --- !u!4 &520713629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 150192120582890100, guid: 69027938feef47947b8094a62ec1a96c, type: 3}
@@ -31109,6 +31132,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4112993118529676612, guid: f5f21b11c8a056742bfb0d6cc8a9d36f, type: 3}
   m_PrefabInstance: {fileID: 934473082}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1949370820 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3513047152231738900, guid: d3576b1e07d30497aa7278af8358929e, type: 3}
+  m_PrefabInstance: {fileID: 3513047153649962378}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1956644359 stripped
 Transform:
@@ -56313,6 +56341,26 @@ PrefabInstance:
     - target: {fileID: 7228583615728931043, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: m_Tiles.Array.data[90].second.m_TileObjectToInstantiateIndex
       value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346708799178476593, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 63.556713
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346708799178476593, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4788
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346708799178476593, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -16.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649021810064360065, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
+      propertyPath: targetLayers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649021810064360065, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
+      propertyPath: targetLayers.Array.data[0].m_Bits
+      value: 384
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}

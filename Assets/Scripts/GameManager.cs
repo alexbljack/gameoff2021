@@ -14,15 +14,14 @@ public class GameManager : Singleton<GameManager>
     
     public static event Action EnableDebugModeEvent;
     public static event Action DisableDebugModeEvent;
-
-    public static event Action FinishLevel;
-
+    
     bool _debugMode;
+    IEnumerator _debugRoutine;
     LevelExit _exit;
 
     public List<Enemy> Enemies => FindObjectsOfType<Enemy>().ToList();
     public Transform Player => FindObjectOfType<PlayerController>().transform;
-
+    
     void Start()
     {
         _exit = FindObjectOfType<LevelExit>();
@@ -39,14 +38,14 @@ public class GameManager : Singleton<GameManager>
         if (!_debugMode)
         {
             EnableDebugModeEvent?.Invoke();
-            StartCoroutine(DebugModeRoutine());
+            StartCoroutine(DebugModeRoutine(debugModeCooldown));
         }
     }
 
-    IEnumerator DebugModeRoutine()
+    IEnumerator DebugModeRoutine(float cooldown)
     {
         _debugMode = true;
-        yield return new WaitForSeconds(debugModeCooldown);
+        yield return new WaitForSeconds(cooldown);
         _debugMode = false;
         DisableDebugModeEvent?.Invoke();
     }

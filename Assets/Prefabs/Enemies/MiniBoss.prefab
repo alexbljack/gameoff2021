@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2746449754338486152}
   - component: {fileID: 4027602361507168897}
-  - component: {fileID: 7664072382077838270}
   - component: {fileID: 3552522342932907626}
   - component: {fileID: 7422015627603150104}
   - component: {fileID: 8742524369974240673}
@@ -58,19 +57,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dieEffect: {fileID: 5589317039008627437, guid: 4a4f9fd18c06e184ebaec95117e48445, type: 3}
   bloodSplash: {fileID: 1694598090275386285, guid: 0d61e61f1633d3b4d881bc330b33d5cf, type: 3}
---- !u!114 &7664072382077838270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2746449754338486158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b760e7af2f62e485385a1bc8712ed13f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lagInSeconds: 0.2
 --- !u!114 &3552522342932907626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,6 +523,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3352187571530663383, guid: 303a421c69224439fac64a50bf08d53b, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352187571530663383, guid: 303a421c69224439fac64a50bf08d53b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -0.2206
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352187571530663383, guid: 303a421c69224439fac64a50bf08d53b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -0.1002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352187571530663383, guid: 303a421c69224439fac64a50bf08d53b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.003000021
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352187571530663383, guid: 303a421c69224439fac64a50bf08d53b, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4551464354872121645, guid: 303a421c69224439fac64a50bf08d53b, type: 3}

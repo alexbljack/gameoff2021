@@ -55,6 +55,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7133204817447744104, guid: b45b4eafd658749118ec3deb0a9423d3, type: 3}
+      propertyPath: targetLayers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133204817447744104, guid: b45b4eafd658749118ec3deb0a9423d3, type: 3}
+      propertyPath: targetLayers.Array.data[0].m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 8036909091957748526, guid: b45b4eafd658749118ec3deb0a9423d3, type: 3}
       propertyPath: m_Name
       value: PlayerBullet

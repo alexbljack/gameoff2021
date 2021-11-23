@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3466386301227143869, guid: bcef91cdda17f42f180f5d3b3661376d, type: 3}
+      propertyPath: targetLayers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466386301227143869, guid: bcef91cdda17f42f180f5d3b3661376d, type: 3}
+      propertyPath: targetLayers.Array.data[0].m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 4426473531735331835, guid: bcef91cdda17f42f180f5d3b3661376d, type: 3}
       propertyPath: m_Name
       value: EnemyBullet

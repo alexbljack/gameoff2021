@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.045, y: 1.671}
-  m_SizeDelta: {x: 2.4564, y: 0.2272}
+  m_AnchoredPosition: {x: -0.05, y: 0.97}
+  m_SizeDelta: {x: 1.725, y: 0.2272}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8713865940540192607
 Canvas:
@@ -58,8 +58,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 761572103
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &1979472922761669921
 MonoBehaviour:
@@ -111,8 +111,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8010538428323371856}
   - component: {fileID: 9138530147873439321}
-  - component: {fileID: 8079676971504944881}
   - component: {fileID: -5735949463548339847}
+  - component: {fileID: -4524302890937634549}
   - component: {fileID: -7533706913612546856}
   - component: {fileID: 7745900865489021128}
   - component: {fileID: 8010538428323371863}
@@ -156,19 +156,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dieEffect: {fileID: 5589317039008627437, guid: ca7f1e99d8708a3489109f0ca6c00777, type: 3}
   bloodSplash: {fileID: 1694598090275386285, guid: 8effff8ab038e6e4ca336737bb36b170, type: 3}
---- !u!114 &8079676971504944881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8010538428323371862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fde2042af584a7b8af35c76c37ceb9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gun: {fileID: 1000141170142585369}
 --- !u!114 &-5735949463548339847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +171,20 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 1024
+--- !u!114 &-4524302890937634549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8010538428323371862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869e617cc3c1f498b819e807ebb798f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chargeForce: 10
+  cooldown: 2
 --- !u!114 &-7533706913612546856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,14 +565,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5087010339080996869, guid: 48e67e36ab58e4131ac3029a56fad770, type: 3}
   m_PrefabInstance: {fileID: 8010538429057126003}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1000141170142585369 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7118521239526141034, guid: 48e67e36ab58e4131ac3029a56fad770, type: 3}
-  m_PrefabInstance: {fileID: 8010538429057126003}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 100373097ba394c8e9ac05013b560221, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
