@@ -3,6 +3,8 @@ using UnityEngine;
 public class DebugBlock : MonoBehaviour
 {
     Entity _entity;
+    [SerializeField]
+    GameObject poofEffect;
 
     void Awake()
     {
@@ -28,6 +30,7 @@ public class DebugBlock : MonoBehaviour
 
     void OnDie()
     {
+        Instantiate(poofEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
