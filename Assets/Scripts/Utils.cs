@@ -2,13 +2,6 @@
 using System;
 using UnityEngine;
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Assertions;
-using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
-
 public static class Utils
 {
     public static bool RaycastBox(Vector2 direction, Bounds bounds, LayerMask layer, 
