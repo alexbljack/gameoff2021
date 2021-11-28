@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     
     RigidBodyMove _moveController;
     Entity _entity;
+    Animator animator;
     SpriteRenderer _renderer;
 
     Gun _gun;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
         _renderer = GetComponent<SpriteRenderer>();
         
         _gun = transform.GetComponentInChildren<Gun>();
+        animator = GetComponent<Animator>();
     }
 
     void OnEnable()
@@ -42,6 +44,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        animator.SetBool("isRunning", false);
+
         float lag = GetInputLag();
         
         if (Input.GetKeyDown(KeyCode.Space))
@@ -85,11 +89,13 @@ public class PlayerController : MonoBehaviour
     void MoveRight()
     {
         _moveInput = 1;
+        animator.SetBool("isRunning", true);
     }
 
     void MoveLeft()
     {
         _moveInput = -1;
+        animator.SetBool("isRunning", true);
     }
 
     void FixedUpdate()
@@ -104,7 +110,13 @@ public class PlayerController : MonoBehaviour
         {
             _moveController.Jump(jumpForce);
             _pressedJump = false;
+            animator.SetTrigger("jump");
         }
+
+        if (!_moveController.IsOnGround())
+            animator.SetBool("isJumping", true);
+        else
+            animator.SetBool("isJumping", false);
 
         // _rb.velocity = new Vector2(Mathf.Clamp(_rb.velocity.x, -runSpeed, runSpeed), _rb.velocity.y);
     }

@@ -185,6 +185,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 1024
+  _rb: {fileID: 0}
 --- !u!114 &-7533706913612546856
 MonoBehaviour:
   m_ObjectHideFlags: 0
