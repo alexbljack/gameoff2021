@@ -8745,6 +8745,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2746449754338486154, guid: 632301693dd804ce8b53b2e542b8cb8f, type: 3}
+      propertyPath: m_Size.x
+      value: 1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746449754338486154, guid: 632301693dd804ce8b53b2e542b8cb8f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746449754338486154, guid: 632301693dd804ce8b53b2e542b8cb8f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746449754338486154, guid: 632301693dd804ce8b53b2e542b8cb8f, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.13
+      objectReference: {fileID: 0}
     - target: {fileID: 2746449754338486158, guid: 632301693dd804ce8b53b2e542b8cb8f, type: 3}
       propertyPath: m_Name
       value: MiniBoss
