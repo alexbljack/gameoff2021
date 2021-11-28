@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 
-public class ShootAtPlayer : EnemyShootBehaviour
+public class ShootAtPlayer : EnemyBehaviour
 {
     [SerializeField] Gun gun;
 

@@ -20,7 +20,7 @@ public class RoamingBehaviour : MonoBehaviour
     [SerializeField] float waitTime;
 
     RigidBodyMove _moveController;
-    List<EnemyShootBehaviour> _gunBehaviours;
+    List<EnemyBehaviour> _gunBehaviours;
     bool _shouldChangeDir = true;
     float _xInput = 1;
     bool _calming = false;
@@ -29,7 +29,7 @@ public class RoamingBehaviour : MonoBehaviour
     void Awake()
     {
         _moveController = GetComponent<RigidBodyMove>();
-        _gunBehaviours = GetComponents<EnemyShootBehaviour>().ToList();
+        _gunBehaviours = GetComponents<EnemyBehaviour>().ToList();
     }
 
     void Start()
@@ -84,9 +84,9 @@ public class RoamingBehaviour : MonoBehaviour
         }
     }
 
-    void SetComponentsState(List<EnemyShootBehaviour> behaviours, bool enabled)
+    void SetComponentsState(List<EnemyBehaviour> behaviours, bool enabled)
     {
-        foreach (EnemyShootBehaviour behaviour in behaviours)
+        foreach (EnemyBehaviour behaviour in behaviours)
         {
             behaviour.enabled = enabled;
         }

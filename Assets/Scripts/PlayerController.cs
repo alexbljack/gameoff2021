@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     RigidBodyMove _moveController;
     Entity _entity;
     Animator animator;
+    SpriteRenderer _renderer;
 
     Gun _gun;
 
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         _entity = GetComponent<Entity>();
         _moveController = GetComponent<RigidBodyMove>();
+        _renderer = GetComponent<SpriteRenderer>();
         
         _gun = transform.GetComponentInChildren<Gun>();
         animator = GetComponent<Animator>();
@@ -121,6 +123,16 @@ public class PlayerController : MonoBehaviour
 
     void Die()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Hide();
+        StartCoroutine(GameManager.Instance.RestartLevel());
+    }
+
+    void Hide()
+    {
+        _renderer.enabled = false;
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(false);
+        }
     }
 }

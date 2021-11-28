@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpiralShooting : EnemyShootBehaviour
+public class SpiralShooting : EnemyBehaviour
 {
     [SerializeField] float rotationSpeed;
     [SerializeField] Gun gun;
