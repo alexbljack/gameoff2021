@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour
 {
     CamShake camShake;
     Entity _entity;
+    SpriteRenderer _renderer;
+    
     [SerializeField]
     GameObject dieEffect;
     [SerializeField]
@@ -15,6 +17,7 @@ public class Enemy : MonoBehaviour
     void Awake()
     {
         _entity = GetComponent<Entity>();
+        _renderer = GetComponent<SpriteRenderer>();
         camShake = Camera.main.GetComponent<CamShake>();
     }
     
@@ -33,6 +36,8 @@ public class Enemy : MonoBehaviour
         camShake.Shake();
         Instantiate(bloodSplash, new Vector3(transform.position.x, transform.position.y - 1f), Quaternion.identity);
         Instantiate(dieEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        _renderer.enabled = false;
+        transform.Find("Canvas").gameObject.SetActive(false);
+        Destroy(gameObject, _entity.DeathClipLength);
     }
 }

@@ -7,7 +7,7 @@ public class LevelExit : MonoBehaviour
     {
         if (col.GetComponent<PlayerController>() != null)
         {
-            GameManager.Instance.ExitLevel();
+            StartCoroutine(GameManager.Instance.ExitLevel());
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChargeAtPlayer : EnemyShootBehaviour
+public class ChargeAtPlayer : EnemyBehaviour
 {
     [SerializeField] float chargeForce;
     [SerializeField] float cooldown;
@@ -48,6 +48,6 @@ public class ChargeAtPlayer : EnemyShootBehaviour
     void Charge()
     {
         Vector3 direction = GameManager.Instance.Player.transform.position - transform.position;
-        _rb.AddForce(direction * chargeForce, ForceMode2D.Impulse);
+        _rb.AddForce(direction.normalized * chargeForce, ForceMode2D.Impulse);
     }
 }
