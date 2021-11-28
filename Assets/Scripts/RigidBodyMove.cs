@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -7,9 +6,9 @@ public class RigidBodyMove : MonoBehaviour
 {
     [SerializeField] LayerMask groundLayer;
     
-    Rigidbody2D _rb;
+    public Rigidbody2D _rb;
     Collider2D _collider;
-    
+
     Vector2 _currentVel;
     
     void Awake()
