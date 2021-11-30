@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 8010538428323371858}
   - component: {fileID: 8010538428323371857}
   - component: {fileID: 23710882533520448}
+  - component: {fileID: 1567642575110572409}
   m_Layer: 8
   m_Name: Boss_turtle
   m_TagString: Untagged
@@ -416,6 +417,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1567642575110572409
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8010538428323371862}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bbab95e5cacf6bc448c23434c7c5d1e5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3258607081394721393
 PrefabInstance:
   m_ObjectHideFlags: 0
