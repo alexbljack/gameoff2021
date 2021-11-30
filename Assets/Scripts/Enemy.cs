@@ -37,6 +37,10 @@ public class Enemy : MonoBehaviour
         Instantiate(bloodSplash, new Vector3(transform.position.x, transform.position.y - 0.75f), Quaternion.identity);
         Instantiate(dieEffect, transform.position, Quaternion.identity);
         _renderer.enabled = false;
+        foreach (EnemyBehaviour behaviour in GetComponents<EnemyBehaviour>())
+        {
+            behaviour.enabled = false;
+        }
         transform.Find("Canvas").gameObject.SetActive(false);
         Destroy(gameObject, _entity.DeathClipLength);
     }
