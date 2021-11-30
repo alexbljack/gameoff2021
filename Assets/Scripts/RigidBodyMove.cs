@@ -40,6 +40,6 @@ public class RigidBodyMove : MonoBehaviour
     public bool IsNextToWall(float direction)
     {
         var raycastDir = new Vector2(direction, 0);
-        return Utils.RaycastBox(raycastDir, _collider.bounds, groundLayer, scaleY: 0.7f);
+        return Utils.RaycastBox(raycastDir, _collider.bounds, groundLayer, scaleY: 0.9f);
     }
 }

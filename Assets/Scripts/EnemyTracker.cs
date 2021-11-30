@@ -12,7 +12,7 @@ public class EnemyTracker : MonoBehaviour
         foreach (var enemy in GameManager.Instance.Enemies)
         {
             var icon = Instantiate(iconPrefab, transform.position, Quaternion.identity);
-            icon.transform.SetParent(transform);
+            icon.transform.SetParent(transform, false);
             icon.GetComponent<Image>().sprite = enemy.GetComponent<SpriteRenderer>().sprite;
             icon.GetComponent<EnemyIcon>().Init(enemy.GetComponent<Entity>());
         }
