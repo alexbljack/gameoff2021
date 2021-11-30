@@ -10,23 +10,24 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject bloodSplash;
 
     RigidBodyMove _moveController;
+    Rigidbody2D _rb;
     Entity _entity;
-    Animator animator;
+    Animator _animator;
     SpriteRenderer _renderer;
 
     Gun _gun;
 
-    float _moveInput;
     bool _pressedJump;
     
     void Awake()
     {
+        _rb = GetComponent<Rigidbody2D>();
         _entity = GetComponent<Entity>();
         _moveController = GetComponent<RigidBodyMove>();
         _renderer = GetComponent<SpriteRenderer>();
         
         _gun = transform.GetComponentInChildren<Gun>();
-        animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
     }
 
     void OnEnable()
@@ -39,35 +40,16 @@ public class PlayerController : MonoBehaviour
         _entity.DeadEvent -= Die;
     }
 
-    void Start()
-    {
-        _moveInput = 0;
-    }
-
     void Update()
     {
-        animator.SetBool("isRunning", false);
-
-        float lag = GetInputLag();
-        
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Invoke(nameof(MakeJumpReady), lag);
+            MakeJumpReady();;
         }
 
         if (Input.GetMouseButtonDown(0))
         {
-            Invoke(nameof(ShootGun), lag);
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            Invoke(nameof(MoveLeft), lag);
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            Invoke(nameof(MoveRight), lag);
+            ShootGun();
         }
     }
 
@@ -88,38 +70,20 @@ public class PlayerController : MonoBehaviour
         _pressedJump = true;
     }
 
-    void MoveRight()
-    {
-        _moveInput = 1;
-        animator.SetBool("isRunning", true);
-    }
-
-    void MoveLeft()
-    {
-        _moveInput = -1;
-        animator.SetBool("isRunning", true);
-    }
-
     void FixedUpdate()
     {
-        if (_moveInput != 0f)
-        {
-            _moveController.Move(_moveInput, runSpeed);
-            _moveInput = 0;
-        }
+        var moveInput = Input.GetAxis("Horizontal");
+        _moveController.Move(moveInput, runSpeed);
+        _animator.SetFloat("speed", Mathf.Abs(_rb.velocity.x));
 
         if (_pressedJump && _moveController.IsOnGround())
         {
             _moveController.Jump(jumpForce);
             _pressedJump = false;
-            animator.SetTrigger("jump");
+            _animator.SetTrigger("jump");
         }
 
-        if (!_moveController.IsOnGround())
-            animator.SetBool("isJumping", true);
-        else
-            animator.SetBool("isJumping", false);
-
+        _animator.SetBool("isJumping", !_moveController.IsOnGround());
         // _rb.velocity = new Vector2(Mathf.Clamp(_rb.velocity.x, -runSpeed, runSpeed), _rb.velocity.y);
     }
 
