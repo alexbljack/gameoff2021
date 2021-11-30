@@ -5,6 +5,7 @@ using UnityEngine;
 public class RigidBodyMove : MonoBehaviour
 {
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] float inertia = 0.01f;
     
     public Rigidbody2D _rb;
     Collider2D _collider;
@@ -24,7 +25,7 @@ public class RigidBodyMove : MonoBehaviour
         
         _rb.velocity = IsNextToWall(input) ? 
             new Vector2(0, velocity.y) :
-            Vector2.SmoothDamp(velocity, targetVel, ref _currentVel, 0.05f);
+            Vector2.SmoothDamp(velocity, targetVel, ref _currentVel, inertia);
     }
 
     public void Jump(float jumpForce)
@@ -40,6 +41,6 @@ public class RigidBodyMove : MonoBehaviour
     public bool IsNextToWall(float direction)
     {
         var raycastDir = new Vector2(direction, 0);
-        return Utils.RaycastBox(raycastDir, _collider.bounds, groundLayer, scaleY: 0.9f);
+        return Utils.RaycastBox(raycastDir, _collider.bounds, groundLayer, scaleY: 0.8f);
     }
 }

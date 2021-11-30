@@ -173,6 +173,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 1024
+  inertia: 0.05
   _rb: {fileID: 0}
 --- !u!114 &-4524302890937634549
 MonoBehaviour:

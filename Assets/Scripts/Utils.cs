@@ -9,7 +9,7 @@ public static class Utils
     {
         Vector2 boxSize = new Vector2(bounds.size.x * scaleX, bounds.size.y * scaleY);
         RaycastHit2D hit = Physics2D.BoxCast(bounds.center, boxSize, 0f, 
-            direction, 0.1f, layer);
+            direction, 0.2f, layer);
         return hit.collider != null;
     }
     

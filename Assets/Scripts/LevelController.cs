@@ -24,9 +24,7 @@ public class LevelController : MonoBehaviour
 
     int HalfWidth => levelWidth / 2;
     int HalfHeight => levelHeight / 2;
-
-    Tilemap _debugTilemap;
-
+    
     void OnEnable()
     {
         GameManager.EnableDebugModeEvent += EnableDebug;
@@ -88,7 +86,8 @@ public class LevelController : MonoBehaviour
 
     void EnableDebug()
     {
-        CreateDebugTilemap();
+        CreateDebugTilemap(new List<Tilemap> { commonTilemap, invisibleTilemap, wallsTilemap }, Color.green);
+        CreateDebugTilemap(new List<Tilemap> { damageTilemap }, Color.red);
         SetTilemapRender(noCollideTilemap, false);
         environment.SetActive(false);
     }
@@ -100,16 +99,15 @@ public class LevelController : MonoBehaviour
         environment.SetActive(true);
     }
 
-    public void CreateDebugTilemap()
+    public void CreateDebugTilemap(List<Tilemap> tilemaps, Color color)
     {
         GameObject obj = Instantiate(debugTilemapPrefab, Vector2.zero, Quaternion.identity);
         obj.transform.SetParent(transform);
-        _debugTilemap = obj.GetComponent<Tilemap>();
+        obj.GetComponent<TilemapRenderer>().material.SetColor("_Color", color);
+        obj.tag = "Debug";
+        var debugTilemap = obj.GetComponent<Tilemap>();
         
-        foreach (Tilemap tilemap in new List<Tilemap>
-        {
-            commonTilemap, invisibleTilemap, damageTilemap, wallsTilemap
-        })
+        foreach (Tilemap tilemap in tilemaps)
         {
             for (int x=-HalfWidth; x <= HalfWidth; x++)
             {
@@ -117,7 +115,7 @@ public class LevelController : MonoBehaviour
                 {
                     if (tilemap.GetTile(new Vector3Int(x, y)) != null)
                     {
-                        _debugTilemap.SetTile(new Vector3Int(x, y), debugBaseTile);
+                        debugTilemap.SetTile(new Vector3Int(x, y), debugBaseTile);
                     }
                 }
             }
@@ -126,7 +124,9 @@ public class LevelController : MonoBehaviour
 
     void HideDebugTiles()
     {
-        Destroy(_debugTilemap.gameObject);
-        _debugTilemap = null;
+        foreach (var tilemap in GameObject.FindGameObjectsWithTag("Debug"))
+        {
+            Destroy(tilemap.gameObject);
+        }
     }
 }
