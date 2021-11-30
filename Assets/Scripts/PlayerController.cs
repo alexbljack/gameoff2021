@@ -6,7 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float runSpeed;
     [SerializeField] float jumpForce;
-    
+    [SerializeField] GameObject dieEffect;
+    [SerializeField] GameObject bloodSplash;
+
     RigidBodyMove _moveController;
     Entity _entity;
     Animator animator;
@@ -123,6 +125,8 @@ public class PlayerController : MonoBehaviour
 
     void Die()
     {
+        Instantiate(bloodSplash, new Vector3(transform.position.x, transform.position.y - 0.5f), Quaternion.identity);
+        Instantiate(dieEffect, transform.position, Quaternion.identity);
         Hide();
         StartCoroutine(GameManager.Instance.RestartLevel());
     }
