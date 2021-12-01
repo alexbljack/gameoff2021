@@ -2273,8 +2273,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7533706913612546856, guid: 7e56bd73b7e647340a5e15ea55aaaa48, type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7533706913612546856, guid: 7e56bd73b7e647340a5e15ea55aaaa48, type: 3}
       propertyPath: detectRadius
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4524302890937634549, guid: 7e56bd73b7e647340a5e15ea55aaaa48, type: 3}
+      propertyPath: cooldown
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4524302890937634549, guid: 7e56bd73b7e647340a5e15ea55aaaa48, type: 3}
       propertyPath: chargeForce
@@ -55622,11 +55630,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7228583615711888643, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: levelWidth
-      value: 28
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7228583615711888643, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: levelHeight
-      value: 14
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7228583615711888643, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: debugTilemap

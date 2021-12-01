@@ -53831,11 +53831,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7228583613847877173, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0
+      value: 0.001960814
       objectReference: {fileID: 0}
     - target: {fileID: 7228583613847877173, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0
+      value: 0.001960814
       objectReference: {fileID: 0}
     - target: {fileID: 7228583614377424244, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: m_ChunkCullingBounds.x
@@ -54547,19 +54547,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7228583615537231621, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0
+      value: 0.001960814
       objectReference: {fileID: 0}
     - target: {fileID: 7228583615537231621, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0
+      value: 0.001960814
       objectReference: {fileID: 0}
     - target: {fileID: 7228583615634145568, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0
+      value: 0.001960814
       objectReference: {fileID: 0}
     - target: {fileID: 7228583615634145568, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0
+      value: 0.001960814
       objectReference: {fileID: 0}
     - target: {fileID: 7228583615634145571, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: m_Size.x
@@ -56359,11 +56359,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7228583615711888643, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: levelWidth
-      value: 28
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7228583615711888643, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: levelHeight
-      value: 14
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7228583615711888643, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: debugTilemap

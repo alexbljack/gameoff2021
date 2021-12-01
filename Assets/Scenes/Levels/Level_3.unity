@@ -60029,11 +60029,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7228583615711888643, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: levelWidth
-      value: 28
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7228583615711888643, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: levelHeight
-      value: 14
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7228583615711888643, guid: 7e734803883e746b59fd8f91d9c8bcf1, type: 3}
       propertyPath: debugTilemap
